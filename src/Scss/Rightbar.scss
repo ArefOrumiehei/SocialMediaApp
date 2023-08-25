@@ -1,17 +1,23 @@
+@import '../App.scss';
+
 .rightbar {
-    flex: 3;
-    position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
-    overflow: scroll;
+    @include themify($themes){
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    .container {
-        padding: 20px;
+        flex: 3;
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        background-color: themed('bgSoft');
+        color: themed('textColor');
         
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .container {
+            padding: 20px;
+            
 
         .item {
             -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.7);
@@ -19,27 +25,30 @@
             box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.7);
             padding: 20px;
             margin-bottom: 25px;
+            background-color: themed('bg');
 
+            
             .subTitle {
                 color: gray;
             }
-
+            
             .user {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 margin: 20px 0;
-
+                
                 .userInfo {
                     display: flex;
                     align-items: center;
                     gap: 10px;
                     position: relative;
-
+                    
                     p {
-                        color: gray;
-                    }
+                        color: themed('textColorSoft');
 
+                    }
+                    
                     .online {
                         width: 12px;
                         height: 12px;
@@ -52,15 +61,21 @@
                     
                     span {
                         font-weight: 500;
-                        color: black;
-                    }
-                }
+                        color: themed('textColor');
 
+                    }
+
+                }
+                
+                .time {
+                    font-size: 12px;
+                }
+                
                 .buttons {
                     display: flex;
                     align-items: center;
                     gap: 10px;
-
+                    
                     button {
                         border: none;
                         padding: 5px;
@@ -70,7 +85,7 @@
                         &:first-child {
                             background-color: #5271ff;
                         }
-    
+                        
                         &:last-child {
                             background-color: #f0544f;
                         }
@@ -80,4 +95,5 @@
             }
         }
     }
+}
 }

@@ -1,38 +1,48 @@
+@import '../App.scss';
+
 .leftbar {
-    flex: 2;
-    position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
-    overflow: scroll;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .container {
+    @include themify($themes){
+        flex: 2;
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        background-color: themed('bg');
+        color: themed('textColor');
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .container {
         padding: 20px;
-
+        
         .menu {
             display: flex;
             flex-direction: column;
             gap: 10px;
-
+            
             .subTitle {
                 font-size: 12px;
                 color: gray;
             }
-
+            
             div {
                 cursor: pointer;
-            }
 
+                &:hover {
+                    background-color: themed('hover');
+                }
+            }
+            
         }
         
         hr {
             border: none;
             margin: 20px 0;
             height: .5px;
-            background-color: silver;
+            background-color: themed('border');
         }
     }
+}
 }

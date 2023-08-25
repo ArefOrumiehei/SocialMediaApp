@@ -9,10 +9,6 @@ const Item = styled.div `
     transition: all .3s ease-out;
     border-radius: 5px;
     padding: 5px;
-
-    &:hover {
-        background-color: #f2f2f2;
-    }
 `
 
 const LeftbarItem = ({icon , title}) => {

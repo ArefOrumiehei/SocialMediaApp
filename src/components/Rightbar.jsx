@@ -30,38 +30,38 @@ const RightBar = () => {
                     </div>
                 </div>
                 <div className="item">
-                    <span className='subTitle'>Last activities</span>
+                    <span className='subTitle'>Last Activities</span>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
                             <p><span>Aref Orumiehei</span> liked your post.</p>
                         </div>
-                        <span>1 min ago</span>
+                        <span className='time'>1 min ago</span>
                     </div>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
                             <p><span>Aref Orumiehei</span> liked your post.</p>
                         </div>
-                        <span>1 min ago</span>
+                        <span className='time'>1 min ago</span>
                     </div>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
                             <p><span>Aref Orumiehei</span> liked your post.</p>
                         </div>
-                        <span>1 min ago</span>
+                        <span className='time'>1 min ago</span>
                     </div>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
                             <p><span>Aref Orumiehei</span> liked your post.</p>
                         </div>
-                        <span>1 min ago</span>
+                        <span className='time'>1 min ago</span>
                     </div>
                 </div>
                 <div className="item">
-                    <span className="subTitle">Online friends</span>
+                    <span className="subTitle">Online Friends</span>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
