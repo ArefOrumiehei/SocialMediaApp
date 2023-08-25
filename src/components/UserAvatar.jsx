@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 
 //MUI
 import Avatar from '@mui/material/Avatar';
@@ -14,6 +14,10 @@ import Logout from '@mui/icons-material/Logout';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 
+//Context
+import { DarkModeContext } from '../context/DarkModeProvider';
+
+
 export default function AccountMenu() {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -25,6 +29,11 @@ export default function AccountMenu() {
     const handleClose = () => {
     setAnchorEl(null);
     };
+
+    const {darkMode} = useContext(DarkModeContext)
+
+    const textColor = darkMode ? 'whitesmoke' : '#000'
+    const textColorSoft = darkMode ? 'silver' : '#555';
 
     return (
         <>
@@ -42,7 +51,7 @@ export default function AccountMenu() {
                 </IconButton>
             </Tooltip>
             </Box>
-            <Menu
+            <Menu className='avatarMenu'
             anchorEl={anchorEl}
             id="account-menu"
             open={open}
@@ -53,6 +62,7 @@ export default function AccountMenu() {
                 sx: {
                 overflow: 'visible',
                 filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                backgroundColor : darkMode ? '#333' : '#f6f3f3',
                 mt: 1.5,
                 '& .MuiAvatar-root': {
                     width: 35,
@@ -68,7 +78,8 @@ export default function AccountMenu() {
                     right: 14,
                     width: 10,
                     height: 10,
-                    bgcolor: 'background.paper',
+                    // bgcolor: 'background.paper',
+                    backgroundColor : darkMode ? '#333' : '#f6f3f3',
                     transform: 'translateY(-50%) rotate(45deg)',
                     zIndex: 0,
                 },
@@ -78,29 +89,29 @@ export default function AccountMenu() {
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
             <MenuItem onClick={handleClose}>
-                <Avatar sx={{ width: 35, height: 35 , bgcolor: deepPurple[500] }}>A</Avatar> Profile
+                <Avatar sx={{ width: 35, height: 35 , bgcolor: deepPurple[500] }}>A</Avatar> <span style={{ color: textColor }}>Profile</span>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-                <Avatar sx={{ width: 35, height: 35 , bgcolor: deepOrange[500] }} /> My account
+                <Avatar sx={{ width: 35, height: 35 , bgcolor: deepOrange[500] }} /> <span style={{ color: textColor }}>My account</span>
             </MenuItem>
             <Divider />
             <MenuItem onClick={handleClose}>
                 <ListItemIcon>
-                <PersonAdd fontSize="small" />
+                    <PersonAdd style={{color : textColorSoft}} fontSize="small" />
                 </ListItemIcon>
-                Add another account
+                <span style={{ color: textColor }}>Add another account</span>
             </MenuItem>
             <MenuItem onClick={handleClose}>
                 <ListItemIcon>
-                <Settings fontSize="small" />
+                    <Settings style={{color : textColorSoft}} fontSize="small" />
                 </ListItemIcon>
-                Settings
+                <span style={{ color: textColor }}>Settings</span>
             </MenuItem>
             <MenuItem onClick={handleClose}>
                 <ListItemIcon>
-                <Logout fontSize="small" />
+                    <Logout style={{color : textColorSoft}} fontSize="small" />
                 </ListItemIcon>
-                Logout
+                <span style={{ color: textColor }}>Logout</span>
             </MenuItem>
             </Menu>
         </>
