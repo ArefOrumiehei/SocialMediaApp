@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 //Style
 import '../Scss/Navbar.scss';
 
+//Components
+import UserAvatar from './UserAvatar'
+
 //Icons
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
@@ -19,22 +22,23 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='left'>
-                <Link to='/'>
+                <Link className='link' to='/'>
                     <span>Aref Social</span>
                 </Link>
-                <HomeOutlinedIcon/>
-                <DarkModeOutlinedIcon/>
-                <GridViewOutlinedIcon/>
+                <HomeOutlinedIcon className='icon'/>
+                <DarkModeOutlinedIcon className='icon'/>
+                <GridViewOutlinedIcon className='icon'/>
                 <div className="search">
-                    <SearchOutlinedIcon/>
+                    <SearchOutlinedIcon className='searchIcon'/>
                     <input type="text" placeholder='Search...' />
                 </div>
             </div>
             <div className="right">
-                <EmailOutlinedIcon/>
-                <NotificationsNoneOutlinedIcon/>
+                <EmailOutlinedIcon className='icon'/>
+                <NotificationsNoneOutlinedIcon className='icon'/>
                 <div className="user">
-                    
+                    <UserAvatar/>
+                    <span>Aref</span>
                 </div>
             </div>
         </div>
