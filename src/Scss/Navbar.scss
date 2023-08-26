@@ -52,6 +52,14 @@
                 width: 400px;
                 font-size: 15px;
                 color: themed('textColor');
+
+                @include mobile {
+                    display: none;
+                }
+
+                @include tablet {
+                    width: 200px;
+                }
             }
         }
     }
@@ -60,6 +68,11 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @include mobile {
+            display: none;
+        }
+
         
         .icon {
             cursor: pointer;
@@ -69,6 +82,10 @@
             display: flex;
             align-items: center;
             gap: 5px;
+
+            @include tablet {
+                display: none;
+            }
         
             span {
                 font-weight: 500;

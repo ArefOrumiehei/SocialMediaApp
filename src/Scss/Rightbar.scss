@@ -2,7 +2,6 @@
 
 .rightbar {
     @include themify($themes){
-
         flex: 3;
         position: sticky;
         top: 70px;
@@ -11,6 +10,14 @@
         background-color: themed('bgSoft');
         color: themed('textColor');
         
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
         &::-webkit-scrollbar {
             display: none;
         }

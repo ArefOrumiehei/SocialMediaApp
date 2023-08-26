@@ -28,6 +28,11 @@
                 left: 0;
                 margin: auto;
                 top: 220px;
+
+                @include mobile {
+                    width: 120px;
+                    height: 120px;
+                }
             }
         }
 
@@ -36,6 +41,11 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            @include mobile {
+                padding: 10px;
+                margin-top: 10px;
+            }
 
             .profileUserInfo {
                 display: flex;
@@ -50,12 +60,26 @@
                 border-radius: 20px;
                 padding: 50px;
 
+                @include mobile {
+                    flex-direction: column;
+                    height: 25vh;
+                    gap: 5px;
+                }
+
+                @include tablet {
+                    padding: 20px;
+                }
+
                 .left{
                     flex: 1;
                     display: flex;
                     align-items: center;
                     gap: 10px;  
                     margin-right: 10px;
+
+                    @include tablet {
+                        flex-wrap: wrap;
+                    }
                     
                     .socialIcon {
                         cursor: pointer;
@@ -79,6 +103,10 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-around;
+
+                        @include tablet {
+                            gap: 20px;
+                        }
 
                         .item {
                             display: flex;

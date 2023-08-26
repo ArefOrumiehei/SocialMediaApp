@@ -15,8 +15,18 @@ import Comments from './Comments';
 const Post = ({name , userId , profilePic , image , desc}) => {
 
     const [openComment , setOpenComment] = useState(false)
+    const [openShare , setOpenShare] = useState(false)
     const [isLiked , setIsLiked] = useState(false)
     
+    const commentHandler = () => {
+        setOpenComment(!openComment);
+        if (openShare) setOpenShare(false);
+    }
+
+    const shareHandler = () => {
+        setOpenShare(!openShare);
+        if (openComment) setOpenComment(false)
+    }
 
     return (
         <div className='post'>
@@ -40,16 +50,17 @@ const Post = ({name , userId , profilePic , image , desc}) => {
                         {isLiked ? <IconHeartFilled/> : <IconHeart/>}
                         <span>Like</span>
                     </button>
-                    <button onClick={() => setOpenComment(!openComment)}>
+                    <button onClick={commentHandler}>
                         <IconMessageDots className='commentIcon'/>
                         <span>Comments</span>
                     </button>
-                    <button>
+                    <button onClick={shareHandler}>
                         <IconShare className='shareIcon'/>
                         <span>Share</span>
                     </button>
                 </div>
                 {openComment && <Comments/>}
+                {/* {openShare && <Share/>} */}
             </div>
         </div>
     );
