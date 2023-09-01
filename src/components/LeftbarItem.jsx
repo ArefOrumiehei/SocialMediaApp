@@ -13,7 +13,7 @@ const Item = styled.div `
 
 const LeftbarItem = ({icon , title}) => {
     return (
-        <Item>
+        <Item className='item'>
             <span className='icon'>{icon}</span>
             <span className='title'>{title}</span>
         </Item>

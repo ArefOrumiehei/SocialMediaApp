@@ -44,7 +44,7 @@ const Post = ({name , userId , profilePic , image , desc}) => {
                     <IconDots className='moreIcon'/>
                 </div>
                 <p className='desc'>{desc}</p>
-                <img className='postImg' src={image} alt="" />
+                <img onDoubleClick={() => setIsLiked(!isLiked)} className='postImg' src={image} alt="" />
                 <div className="buttons">
                     <button onClick={() => setIsLiked(!isLiked)}>
                         {isLiked ? <IconHeartFilled/> : <IconHeart/>}
