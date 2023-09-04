@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import { styled } from 'styled-components';
 
-//Styled Components
 const Item = styled.div `
     display: flex;
     align-items: center;

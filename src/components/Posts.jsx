@@ -1,7 +1,7 @@
 //Style
 import '../Scss/Posts.scss';
 
-
+//Components
 import Post from './Post';
 
 const Posts = () => {

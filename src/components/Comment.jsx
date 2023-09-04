@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 //Style
 import '../Scss/Comment.scss';
-import { Link } from 'react-router-dom';
 
 
 

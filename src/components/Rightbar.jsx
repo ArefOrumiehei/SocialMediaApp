@@ -1,6 +1,11 @@
-import { Avatar } from '@mui/material';
+//Styles
 import '../Scss/Rightbar.scss';
+
+//MUI
+import { Avatar } from '@mui/material';
 import { grey, yellow } from '@mui/material/colors';
+
+//Icons
 import { IconCheck, IconX } from '@tabler/icons-react';
 
 const RightBar = () => {
