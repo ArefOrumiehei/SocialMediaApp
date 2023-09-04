@@ -1,6 +1,7 @@
 import { Avatar } from '@mui/material';
 import '../Scss/Rightbar.scss';
 import { grey, yellow } from '@mui/material/colors';
+import { IconCheck, IconX } from '@tabler/icons-react';
 
 const RightBar = () => {
     return (
@@ -10,22 +11,30 @@ const RightBar = () => {
                     <span className='subTitle'>Suggestions for you</span>
                     <div className="user">
                         <div className="userInfo">
-                            <Avatar sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
-                            <span>Aref Orumiehei</span>
+                            <Avatar className='suggestionsAvatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
+                            <span className='suggestionsName'>Aref Orumiehei</span>
                         </div>
                         <div className="buttons">
                             <button>follow</button>
                             <button>dismiss</button>
+                        </div>
+                        <div className="Icons">
+                            <IconCheck className='check'/>
+                            <IconX className='close'/>
                         </div>
                     </div>
                     <div className="user">
                         <div className="userInfo">
-                            <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
-                            <span>Aref Orumiehei</span>
+                            <Avatar className='suggestionsAvatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
+                            <span className='suggestionsName'>Aref Orumiehei</span>
                         </div>
                         <div className="buttons">
                             <button>follow</button>
                             <button>dismiss</button>
+                        </div>
+                        <div className="Icons">
+                            <IconCheck className='check'/>
+                            <IconX className='close'/>
                         </div>
                     </div>
                 </div>
@@ -34,28 +43,28 @@ const RightBar = () => {
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
-                            <p><span>Aref Orumiehei</span> liked your post.</p>
+                            <p><span className='activitiesName'>Aref Orumiehei</span> liked your post.</p>
                         </div>
                         <span className='time'>1 min ago</span>
                     </div>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
-                            <p><span>Aref Orumiehei</span> liked your post.</p>
+                            <p><span className='activitiesName'>Aref Orumiehei</span> liked your post.</p>
                         </div>
                         <span className='time'>1 min ago</span>
                     </div>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
-                            <p><span>Aref Orumiehei</span> liked your post.</p>
+                            <p><span className='activitiesName'>Aref Orumiehei</span> liked your post.</p>
                         </div>
                         <span className='time'>1 min ago</span>
                     </div>
                     <div className="user">
                         <div className="userInfo">
                             <Avatar className='avatar' sx={{ color : grey[900] , bgcolor: yellow[500] }}>AO</Avatar>
-                            <p><span>Aref Orumiehei</span> liked your post.</p>
+                            <p><span className='activitiesName'>Aref Orumiehei</span> liked your post.</p>
                         </div>
                         <span className='time'>1 min ago</span>
                     </div>

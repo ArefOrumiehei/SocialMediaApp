@@ -10,25 +10,82 @@
         background-color: themed('bg');
         color: themed('textColor');
 
+
         @include mobile {
             display: none;
         }
+
+        @include xs {
+            display: none;
+        }
+
+        @include sm {
+            flex: .5;
+            height: 100vh;
+        }
+
+        @include md {
+            flex: 1;
+            height: 100vh;
+        }
+
+        @include tablet {
+            flex: .5;
+            height: 100vh;
+        }
+
+        @include desktop {
+            height: 100vh;
+        }
+
+        
         
         &::-webkit-scrollbar {
             display: none;
         }
         
         .container {
-        padding: 20px;
+            padding: 20px;
+
+            @include md {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            @include sm {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
         
         .menu {
             display: flex;
             flex-direction: column;
             gap: 10px;
+
+            .MuiAvatar-root {
+                @include md {
+                    display: none;
+                }
+
+                @include sm {
+                    display: none;
+                }
+            }
             
             .subTitle {
                 font-size: 12px;
                 color: gray;
+
+                @include md {
+                    display: none;
+                }
+
+                @include sm {
+                    display: none;
+                }
             }
             
             .item {
@@ -36,6 +93,16 @@
 
                 &:hover {
                     background-color: themed('hover');
+                }
+
+                .title {
+                    @include md {
+                        display: none;
+                    }
+
+                    @include sm {
+                        display: none;
+                    }
                 }
             }
             
@@ -46,6 +113,14 @@
             margin: 20px 0;
             height: .5px;
             background-color: themed('border');
+
+            @include md {
+                display: none;
+            }
+
+            @include sm {
+                display: none;
+            }
         }
     }
 }

@@ -50,10 +50,30 @@
                     align-items: center;
                     gap: 10px;
                     position: relative;
+
                     
+                    .suggestionsAvatar {
+                        @include desktop {
+                            display: none;
+                            // font-size: 14px;
+                            // width: 35px;
+                            // height: 35px;
+                        }
+                    }
+                    
+                    .suggestionsName {
+                        
+                        @include desktop {
+                            font-size: 14px;
+                        }  
+                    }
+
                     p {
                         color: themed('textColorSoft');
 
+                        @include desktop {
+                            font-size: 12px;
+                        }
                     }
                     
                     .online {
@@ -66,16 +86,23 @@
                         left: 28px;
                     }
                     
-                    span {
+                    .activitiesName {
                         font-weight: 500;
                         color: themed('textColor');
 
+                        @include desktop {
+                            font-size: 14px;
+                        }
                     }
 
                 }
                 
                 .time {
                     font-size: 12px;
+
+                    @include desktop {
+                        display: none;
+                    }
                 }
                 
                 .buttons {
@@ -83,6 +110,10 @@
                     align-items: center;
                     gap: 10px;
                     
+                    @include desktop {
+                        display: none;
+                    }
+
                     button {
                         border: none;
                         padding: 5px;
@@ -95,9 +126,26 @@
                         
                         &:last-child {
                             background-color: #f0544f;
+
                         }
                     }
                     
+                }
+
+                .Icons {
+                    display: none;
+
+                    .check {
+                        color: lime;
+                    }
+
+                    .close {
+                        color: red;
+                    }
+
+                    @include desktop {
+                        display: block;
+                    }                    
                 }
             }
         }

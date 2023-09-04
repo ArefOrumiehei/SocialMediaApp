@@ -24,7 +24,7 @@ const LeftBar = () => {
         <div className='leftbar'>
             <div className="container">
                 <div className="menu">
-                    <LeftbarItem
+                    <LeftbarItem id='avatar'
                     icon={<Avatar sx={{ zIndex: 1 , width: 35, height: 35 , bgcolor: deepPurple[500] }}>A</Avatar>}
                     title='Aref'
                     />
